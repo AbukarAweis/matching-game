@@ -62,7 +62,7 @@ h2 {
 
 .item {
     position: relative;
-    width: 100px;
+    width: 100px; 
     height: 100px;
     display: flex;
     justify-content: center;

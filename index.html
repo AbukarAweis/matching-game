@@ -23,8 +23,14 @@
             box.className = 'item';
             box.innerHTML = shuffled_emojis[i]
 
-            box.onclick = function() {
-                this.classList.add('boxOpen')
+            /*
+                When a box is clicked, add it to the 'boxOpen' list. If the size of 'boxOpen' list
+                is more than 1, compare the images on both open boxes. If they are a match, add them to
+                the 'boxMatch' list and keep them face up. If they are not a match, remove them from 
+                'boxOpen' and turn them facedown after 500ms.
+            */
+           box.onclick = function() {
+               this.classList.add('boxOpen')
                 setTimeout(function() {
                     if(document.querySelectorAll('.boxOpen').length > 1){
                         if(document.querySelectorAll('.boxOpen')[0].innerHTML ==
